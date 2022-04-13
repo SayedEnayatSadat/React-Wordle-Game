@@ -1,0 +1,51 @@
+.game-over {
+  padding: 10px 20px;
+  margin-top: 40px;
+}
+
+.game-over-title {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: rgb(33, 182, 33);
+  font-family: sans-serif;
+}
+
+.game-over-title-fail {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: red;
+  font-family: sans-serif;
+}
+
+.game-over-correct-word {
+  margin: 20px 0;
+  font-size: 22px;
+  font-family: sans-serif;
+}
+
+.game-over-attempts {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.game-over-restart {
+  margin-top: 30px;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 10px 26px;
+  background-color: rgba(255, 255, 255, 0.281);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0px 0px 4px white;
+}
+
+.game-over-restart:hover {
+  font-size: 20px;
+  box-shadow: 0px 0px 14px white;
+}
