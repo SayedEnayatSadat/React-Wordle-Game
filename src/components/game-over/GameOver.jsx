@@ -10,7 +10,7 @@ export const GameOver = () => {
     <div className="game-over">
       <h3
         className={
-          gameOver.guessedWord ? "game-over-title" : "game-over-title-fail"
+          gameOver.guessedWord ? "game-over-title-win" : "game-over-title-fail"
         }
       >
         {gameOver.guessedWord ? "You got the right word" : "You failed"}

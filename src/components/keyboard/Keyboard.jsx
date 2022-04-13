@@ -5,7 +5,7 @@ import { Key } from "./key/Key";
 
 
 export const Keyboard = () => {
-  const { onEnter, onDelete, onSelectLetter, currentAttempt, disabledLetters } =
+  const { onEnterLetter, onRemoveLetter, onSelectLetter, currentAttempt, disabledLetters } =
     useContext(AppContext);
 
   const keysLine1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
@@ -15,9 +15,9 @@ export const Keyboard = () => {
   const handleKeyboard = useCallback(
     (event) => {
       if (event.key === "Enter") {
-        onEnter();
+        onEnterLetter();
       } else if (event.key === "Backspace") {
-        onDelete();
+        onRemoveLetter();
       } else {
         keysLine1.forEach((key) => {
           if (event.key.toLowerCase() === key.toLowerCase()) {

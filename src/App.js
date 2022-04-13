@@ -9,6 +9,7 @@ import { boardDefault, generateWordSet } from "./Words";
 export const AppContext = createContext();
 
 function App() {
+  // Alle of the States declared hier:
   const [board, setBoard] = useState(boardDefault);
   const [wordSet, setWordSet] = useState(new Set());
   const [currentAttempt, setCurrentAttempt] = useState({
@@ -42,7 +43,7 @@ function App() {
     });
   };
 
-  const onDelete = () => {
+  const onRemoveLetter = () => {
     if (currentAttempt.letterPossition === 0) return;
     const newBoard = [...board];
     newBoard[currentAttempt.attempt][currentAttempt.letterPossition - 1] = "";
@@ -53,7 +54,7 @@ function App() {
     });
   };
 
-  const onEnter = () => {
+  const onEnterLetter = () => {
     if (currentAttempt.letterPossition !== 5) return;
     let currentWord = "";
     for (let i = 0; i < 5; i++) {
@@ -89,8 +90,8 @@ function App() {
           currentAttempt,
           setCurrentAttempt,
           onSelectLetter,
-          onDelete,
-          onEnter,
+          onRemoveLetter,
+          onEnterLetter,
           correctWord,
           disabledLetters,
           setDisabledLetters,
