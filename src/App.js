@@ -27,13 +27,12 @@ function App() {
     generateWordSet().then((words) => {
       setWordSet(words.wordSet);
       setCorrectWord(words.todaysWord);
-      console.log(words.todaysWord);
+      //console.log(words.todaysWord);
     });
   }, []);
 
   const onSelectLetter = (keyValue) => {
     if (currentAttempt.letterPossition > 4) return;
-
     const newBoard = [...board];
     newBoard[currentAttempt.attempt][currentAttempt.letterPossition] = keyValue;
     setBoard(newBoard);
@@ -60,7 +59,6 @@ function App() {
     for (let i = 0; i < 5; i++) {
       currentWord += board[currentAttempt.attempt][i];
     }
-
     if (wordSet.has(currentWord.toLowerCase())) {
       setCurrentAttempt({
         attempt: currentAttempt.attempt + 1,
@@ -69,12 +67,10 @@ function App() {
     } else {
       alert("The word cannot be found");
     }
-
     if (currentWord === correctWord.toUpperCase()) {
       setGameOver({ gameOver: true, guessedWord: true });
       return;
     }
-
     if (currentAttempt.attempt === 5) {
       setGameOver({ gameOver: true, guessedWord: false });
     }

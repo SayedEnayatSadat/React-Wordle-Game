@@ -1,3 +1,4 @@
+import "./Key.css";
 import { useContext } from "react";
 import { AppContext } from "../../../App";
 

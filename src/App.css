@@ -20,69 +20,6 @@
   flex-direction: column;
 }
 
-#correct {
-  background-color: #528d4e;
-}
-
-#almost {
-  background-color: #b49f39;
-}
-
-#error {
-  background-color: #3a393c;
-}
-
-#bigger {
-  width: 100px;
-}
-#disabled {
-  background-color: #3a393c;
-}
-
-.bottom-side {
-  height: 250px;
-}
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.App {
-  text-align: center;
-  background-color: #121212;
-  width: 100vw;
-  height: 100vh;
-  color: white;
-}
-
-.game {
-  width: 100vw;
-  height: calc(100vh - 170px);
-  display: flex;
-  align-items: center;
-  padding-top: 50px;
-  flex-direction: column;
-}
-
-#correct {
-  background-color: #528d4e;
-}
-
-#almost {
-  background-color: #b49f39;
-}
-
-#error {
-  background-color: #3a393c;
-}
-
-#bigger {
-  width: 100px;
-}
-#disabled {
-  background-color: #3a393c;
-}
-
 .bottom-side {
   height: 250px;
 }
