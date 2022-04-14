@@ -23,11 +23,11 @@ function App() {
   });
   const [correctWord, setCorrectWord] = useState("");
 
+  //TO Get a Word in Page refresh
   useEffect(() => {
     generateWordSet().then((words) => {
       setWordSet(words.wordSet);
       setCorrectWord(words.todaysWord);
-      //console.log(words.todaysWord);
     });
   }, []);
 
