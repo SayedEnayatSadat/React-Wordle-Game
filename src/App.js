@@ -28,6 +28,7 @@ function App() {
     generateWordSet().then((words) => {
       setWordSet(words.wordSet);
       setCorrectWord(words.todaysWord);
+      console.log(words.todaysWord);
     });
   }, []);
 
